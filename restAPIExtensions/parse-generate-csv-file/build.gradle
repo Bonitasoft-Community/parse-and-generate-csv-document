@@ -1,0 +1,38 @@
+plugins {
+    // Apply the groovy plugin to add support for Groovy
+    id 'groovy'
+
+    id 'idea'
+
+    id 'eclipse'
+}
+
+
+dependencies {
+    // To compile Groovy source code
+    compile 'org.codehaus.groovy:groovy-all:2.4.4'
+
+    // For the definition of REST API extension interface and helper classes
+    compile 'org.bonitasoft.web:bonita-web-extensions:7.8.4'
+
+    // Used by the demo REST API extension for Bonita IdentityAPI POJO (User,...)
+    compile 'org.bonitasoft.engine:bonita-common:7.8.4'
+}
+
+// Declare where to find the dependencies of the project
+repositories {
+    // Use jcenter for resolving dependencies
+    jcenter()
+}
+
+
+task packageDistribution(type: Zip, dependsOn: compileGroovy) {
+    destinationDir = file("${buildDir}/dist")
+
+    from sourceSets*.allSource
+}
+
+configure(packageDistribution) {
+    group = 'build'
+    description = 'Package the REST API extension'
+}

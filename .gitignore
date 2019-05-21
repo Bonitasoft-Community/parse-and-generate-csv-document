@@ -1,0 +1,56 @@
+# Output of source code compilation.
+# For example Bonita includes helper Groovy classes such as BonitaUsers (with for example getProcessInstanceInitiator method).
+# Sources (e.g. BonitaUsers.groovy) are located in src-providedGroovy folder and build result (e.g. BonitaUsers.class) is located in bin folder.
+/bin
+
+# Libraries are provided by Bonita Studio or are the result of a build process (e.g. generated from BDM definition).
+/lib
+
+# Classpath configuration for Bonita Studio. Automatically generated.
+.classpath
+
+# Project settings. Studio should be able to create them with appropriate default value when needed.
+.settings
+
+# Should be created by the Studio if needed.
+/META-INF
+
+# Should be created by the Studio if needed.
+/build.properties
+
+# Provided by the Studio.
+/database_connectors_properties
+
+# h2 database information are only used when testing application in Bonita Studio.
+/h2_database
+
+# ACME test organization is provided by Bonita Studio.
+/organizations/ACME.organization
+
+# Ignore the Groovy script sources provided with Bonita Studio.
+/src-providedGroovy
+
+# Web component user individual preferences (e.g. bookmarked,...).
+/web_widgets/.metadata
+/web_page/.metadata
+
+# Web widgets provided by Bonita in the UI Designer.
+/web_widgets/pb*/
+
+# Ignore Gradle files (Gradle can be used for example to build and package REST API extensions).
+.gradle
+**/build/
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored).
+!gradle-wrapper.jar
+
+# IntelliJ (can be used for example to create a REST API extension).
+
+# Ignore IntelliJ output folder.
+**/out/
+
+# IntelliJ user workspace configuration.
+**/.idea/**/workspace.xml
+
+# IntelliJ Gradle integration configuration.
+**/.idea/**/gradle.xml
